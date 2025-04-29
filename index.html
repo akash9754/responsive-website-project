@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    <a href="#" class="brand">Travel</a>
+    <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Explore</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+        <video src="1.mp4" class="video-slide active" autoplay muted loop></video>
+        <video src="2.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="3.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="4.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="5.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="6.mp4" class="video-slide" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Wonderful <span>Island</span></h1>
+            <p>Escape to a paradise of pristine beaches, lush landscapes, and vibrant culture on our wonderful island retreat. Indulge in serenity and adventure, creating timeless memories in this idyllic haven.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet magnam praesentium perspiciatis quas molestiae. Animi, quia. Et dolorem quia magnam, at sed possimus quos reprehenderit necessitatibus vel voluptatum illum!</p> -->
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Challenge <span>Yourself</span></h1>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet magnam praesentium perspiciatis quas molestiae. Animi, quia. Et dolorem quia magnam, at sed possimus quos reprehenderit necessitatibus vel voluptatum illum!</p> -->
+            <p>Elevate your wanderlust! Embrace the unknown, conquer new terrains, and let each destination challenge and transform you. Unleash the adventurer within with our curated travel experiences.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Find <span>Yourself</span></h1>
+            <p>Embark on a journey of self-discovery through travel. Explore new landscapes, cultures, and perspectives. Find yourself in the beauty of diverse destinations. Travel, the ultimate path to self-awareness.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet magnam praesentium perspiciatis quas molestiae. Animi, quia. Et dolorem quia magnam, at sed possimus quos reprehenderit necessitatibus vel voluptatum illum!</p> -->
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Beautiful <span>View</span></h1>
+            <p>Indulge in nature's masterpiece as you bask in the breathtaking beauty of panoramic vistas. A symphony of colors and landscapes awaits, creating an unforgettable tableau for your travel escapade.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet magnam praesentium perspiciatis quas molestiae. Animi, quia. Et dolorem quia magnam, at sed possimus quos reprehenderit necessitatibus vel voluptatum illum!</p> -->
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Beautiful <span>Journey</span></h1>
+            <p>Embark on a breathtaking journey where every step unveils a tapestry of beauty. Explore the world's wonders with us, as each destination becomes a chapter in your own enchanting travel story.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet magnam praesentium perspiciatis quas molestiae. Animi, quia. Et dolorem quia magnam, at sed possimus quos reprehenderit necessitatibus vel voluptatum illum!</p> -->
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Feel The<span> Nature</span></h1>
+            <p>Immerse yourself in nature's embrace. Feel the gentle rustle of leaves, the soothing hum of flowing water, and the crisp scent of the wilderness. Unleash your wanderlust with us.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet magnam praesentium perspiciatis quas molestiae. Animi, quia. Et dolorem quia magnam, at sed possimus quos reprehenderit necessitatibus vel voluptatum illum!</p> -->
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="https://www.facebook.com/profile.php?id=61554641228716"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/av_akash9/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+            <script>
+                const menuBtn = document.querySelector('.menu-btn');
+                const navigation = document.querySelector('.navigation');
+                menuBtn.addEventListener('click', ()=>{
+                    menuBtn.classList.toggle('active');
+                    navigation.classList.toggle('active');
+                })
+
+                // javascript for video slider
+                const btns = document.querySelectorAll(".nav-btn");
+                const Slides = document.querySelectorAll(".video-slide");
+                const content = document.querySelectorAll(".content");
+                
+                var slideNav = function(manual){
+                    btns.forEach((btn) => {
+                            btn.classList.remove("active");
+                            });
+            Slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                    });
+            content.forEach((content) => {
+                    content.classList.remove("active");
+                    });
+              btns[manual].classList.add("active");
+              Slides[manual].classList.add("active");
+              content[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                slideNav(i);
+            })
+        });
+    </script>
+</body>
+</html>
